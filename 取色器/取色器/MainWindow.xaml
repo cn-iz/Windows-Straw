@@ -1,0 +1,34 @@
+﻿<Window x:Class="取色器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:取色器"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="309.8" Width="400" Background="#00000000" AllowsTransparency="True" WindowStyle="None" MouseMove="form_mv" MouseUp="form_up" Loaded="load" Icon="imgs/i.ico">
+    <Grid Margin="0,0,0,-0.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="form" BorderBrush="#FF0510FC" BorderThickness="1" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="105" Margin="75,40,0,0">
+            <Grid x:Name="forminfo" HorizontalAlignment="Left" Height="184" Margin="0.2,0.2,-1.8,-1.8" VerticalAlignment="Top" Width="104" MouseDown="form_mdown" MouseUp="form_up" Background="#02808080" Cursor="Arrow">
+
+                <Grid x:Name="colorbox" HorizontalAlignment="Left" Height="30" Margin="15,40,0,0" VerticalAlignment="Top" Width="30" Background="#FF0E0D0D">
+                    <Border BorderBrush="#FF082EFA" BorderThickness="1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Margin="0,0,-39,-25"/>
+                </Grid>
+                <Border x:Name="x_border" BorderBrush="#FF77787F" BorderThickness="1" HorizontalAlignment="Left" Margin="79,4,0,0" VerticalAlignment="Top" Width="20" Height="20" Visibility="Hidden"/>
+                <Image HorizontalAlignment="Left" Height="20" Margin="79,4,0,0" VerticalAlignment="Top" Width="20" Source="imgs/x.png" MouseEnter="x_en" MouseLeave="x_leave" MouseDown="x_down" Cursor="Hand"/>
+                <Border x:Name="min_border" BorderBrush="#FF717179" BorderThickness="1" HorizontalAlignment="Left" Margin="54,4,0,0" VerticalAlignment="Top" Width="20" Height="20" Visibility="Hidden"/>
+                <Image HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="20" Source="imgs/min.png" Margin="54,4,0,0" Opacity="0.95" MouseEnter="min_en" MouseLeave="min_leave" Cursor="Hand" MouseUp="min_down"/>
+                <TextBox x:Name="strbox" Height="23" Margin="10,148,0,13" TextWrapping="Wrap" Text="#FFFFFF" Width="88" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="#FF070AFA" BorderBrush="#00ABADB3" SelectionBrush="#FF8A948C" Background="Transparent" StylusLeave="strbox_leave" MouseLeave="m_leave"/>
+                <Label x:Name="bt1" Content="1920×1080" Margin="10,91,9,66" Foreground="#FF0A0CF6"/>
+                <TextBox x:Name="rgbbox" Height="23" Margin="10,121,0,40" TextWrapping="Wrap" Text="255,255,255" Width="88" HorizontalAlignment="Left" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF080BF9" MouseLeave="m_leave"/>
+                <TextBox x:Name="nonebox" HorizontalAlignment="Left" Height="0" Margin="75,91,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" SelectionBrush="{x:Null}" Opacity="0"/>
+                <Image HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="20" Source="imgs/i.ico" Margin="6,4,0,0" Opacity="0.95" Cursor="Hand" MouseDown="ico_down" RenderTransformOrigin="1.38,0.51"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
